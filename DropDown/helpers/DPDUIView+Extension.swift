@@ -38,7 +38,7 @@ internal extension UIView {
 internal extension UIWindow {
 	
 	static func visibleWindow() -> UIWindow? {
-		var currentWindow = UIApplication.shared.keyWindow
+		var currentWindow = UIApplication.shared.windows.first
 		
 		if currentWindow == nil {
 			let frontToBackWindows = Array(UIApplication.shared.windows.reversed()) 
